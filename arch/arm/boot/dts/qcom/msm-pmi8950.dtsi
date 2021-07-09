@@ -320,7 +320,7 @@
 			qcom,cycle-counter-en;
 			qcom,capacity-learning-on;
 			qcom,use-otp-profile;
-			qcom,fg-cutoff-voltage-mv = <3500>;
+			qcom,fg-cutoff-voltage-mv = <3200>;
 
 			qcom,fg-soc@4000 {
 			status = "okay";
