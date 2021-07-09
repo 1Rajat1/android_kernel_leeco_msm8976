@@ -6473,7 +6473,7 @@ static int fg_common_hw_init(struct fg_chip *chip)
 	}
 
 	rc = fg_mem_masked_write(chip, settings[FG_MEM_SOC_MAX].address, 0xFF,
-			soc_to_setpoint(settings[FG_MEM_SOC_MAX].value),
+			settings[FG_MEM_DELTA_SOC].value == 1 ? 1 : soc_to_setpoint(settings[FG_MEM_SOC_MAX].value),
 			settings[FG_MEM_SOC_MAX].offset);
 	if (rc) {
 		pr_err("failed to write soc_max rc=%d\n", rc);
